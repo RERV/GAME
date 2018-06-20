@@ -1,24 +1,84 @@
-player 12 12
-stone 4 3
-stone 6 8
-stone 4 9
-stone 2 7
-stone 7 3
-trunk 7 6
-trunk 8 10
-trunk 3 2
-grave 5 3
-grave 3 8
-grave 9 5
-grave 8 3
-grave 2 7
-grave 6 2
-grave 8 9
-grave 6 9
-fruit 12 5
-fruit 11 9
-fruit 2 9
-fruit 8 8
-fruit 9 4
-fruit 7 2
-fruit 10 12
+gaodaa 26 0 2 4 370 402
+blood 5 5 2
+enemy 21 1 2
+enemy 12 6 5
+enemy 26 4 1
+enemy 15 0 1
+enemy 17 14 3
+enemy 8 14 4
+enemy 15 14 2
+enemy 21 6 3
+barrier 23 8 1
+barrier 24 8 1
+barrier 25 8 2
+barrier 26 8 2
+barrier 27 8 2
+barrier 28 8 2
+barrier 14 5 2
+barrier 15 5 2
+barrier 16 5 1
+barrier 17 5 1
+barrier 18 5 1
+barrier 21 5 1
+barrier 0 4 1
+barrier 1 4 1
+barrier 2 4 1
+barrier 3 4 1
+barrier 4 4 1
+barrier 5 4 1
+barrier 6 4 1
+barrier 7 4 1
+barrier 8 4 1
+barrier 8 3 1
+barrier 8 2 1
+barrier 8 1 1
+barrier 8 0 1
+barrier 0 6 3
+barrier 1 6 3
+barrier 2 6 3
+barrier 3 6 3
+barrier 4 6 4
+barrier 5 6 4
+barrier 0 13 2
+barrier 1 13 2
+barrier 2 13 1
+barrier 3 13 1
+barrier 4 13 1
+barrier 5 13 1
+barrier 6 13 3
+barrier 7 13 3
+barrier 7 13 3
+barrier 7 13 3
+barrier 0 8 3
+barrier 1 8 3
+barrier 2 8 3
+barrier 3 8 1
+barrier 4 8 1
+barrier 5 8 1
+barrier 6 8 2
+barrier 13 7 1
+barrier 14 7 1
+barrier 15 7 1
+barrier 16 7 1
+barrier 17 7 1
+barrier 5 10 2
+barrier 6 10 2
+barrier 13 11 2
+barrier 21 3 1
+barrier 22 3 1
+barrier 23 3 1
+barrier 24 3 2
+barrier 25 3 2
+barrier 26 3 2
+barrier 27 3 2
+barrier 28 3 2
+barrier 19 12 3
+barrier 21 12 1
+barrier 22 12 1
+barrier 23 12 1
+barrier 24 12 1
+barrier 25 12 1
+barrier 26 12 1
+barrier 27 12 2
+barrier 28 12 2
+barrier 11 14 2

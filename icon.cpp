@@ -1,15 +1,21 @@
 #include "icon.h"
 #include<iostream>
-int ICON::GRID_SIZE = 32;
+int ICON::GRID_SIZE = 66;
 
 
 pair<string,ICON> pairArray[] =
 {
-    make_pair("player",ICON("player",1,13, 1, 2)),
-    make_pair("stone",ICON("stone",4,9, 1, 1)),
-    make_pair("fruit",ICON("fruit",3,6, 1, 1)),
-    make_pair("grave",ICON("grave",6,9, 1, 1)),
-    make_pair("trunk",ICON("trunk",6,8, 2, 1))
+    make_pair("gaoda",ICON("gaoda",0,0, 1, 1)),
+    make_pair("bullet",ICON("bullet",0,0, 1, 1)),
+    make_pair("enemy",ICON("enemy",0,0, 1, 1)),
+    make_pair("tools",ICON("tools",0,0, 1, 1)),
+    make_pair("dete",ICON("dete",0,0, 1, 1)),
+    make_pair("gun",ICON("gun",0,0, 1, 1)),
+    make_pair("transport",ICON("transport",0,0, 1, 1)),
+    make_pair("direction",ICON("direction",0,0, 1, 1)),
+    make_pair("blood",ICON("blood",0,0, 1, 1)),
+    make_pair("barrier",ICON("barrier",0,0, 1, 1)),
+    make_pair("key",ICON("key",0,0, 1, 1))
 };
 
 map<string,ICON> ICON::GAME_ICON_SET(pairArray,pairArray+sizeof(pairArray)/sizeof(pairArray[0]));
@@ -29,6 +35,7 @@ ICON ICON::findICON(string type)
     kv = ICON::GAME_ICON_SET.find(type);
     if (kv==ICON::GAME_ICON_SET.end())
     {
+
        cout<<"Error: cannot find ICON"<<endl;
        return ICON();
     }

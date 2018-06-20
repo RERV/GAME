@@ -1,42 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MW1</class>
- <widget class="QMainWindow" name="MW1">
+ <class>End</class>
+ <widget class="QMainWindow" name="End">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1877</width>
-    <height>1012</height>
+    <width>1934</width>
+    <height>1141</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>1610</x>
-      <y>60</y>
-      <width>231</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1620</x>
-      <y>240</y>
-      <width>241</width>
-      <height>51</height>
+      <x>730</x>
+      <y>800</y>
+      <width>451</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
@@ -49,10 +33,26 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>1630</x>
-      <y>150</y>
-      <width>221</width>
-      <height>61</height>
+      <x>740</x>
+      <y>930</y>
+      <width>431</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>729</x>
+      <y>675</y>
+      <width>491</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
@@ -68,8 +68,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1877</width>
-     <height>30</height>
+     <width>1934</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

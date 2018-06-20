@@ -1,72 +1,58 @@
 #include "rpgobj.h"
 #include <iostream>
+extern string path;
+void RPGObj::setHp(int k){
+    if(k>500) this->_hp=500;
+    else _hp=k;
+}
 
-void RPGObj::initObj(string type)
-{
-    //TODO 所支持的对象类型应定义为枚举
-    if (type.compare("player")==0){
-        this->_coverable = false;
-        this->_eatable = false;
-        this->_deadly = false;
-        this->_alive = true;
-    }
-    else if (type.compare("stone")==0){
-        this->_coverable = false;
-        this->_eatable = false;
-        this->_deadly = false;
-        this->_alive = true;
-    }
-    else if (type.compare("fruit")==0){
-        this->_coverable = false;
-        this->_eatable = true;
-        this->_deadly = false;
-        this->_alive = true;
-    }
-    else if (type.compare("grave")==0){
-        this->_coverable = true;
-        this->_eatable = false;
-        this->_deadly = true;
-        this->_alive = true;
-    }
-    else if (type.compare("trunk")==0){
-        this->_coverable = false;
-        this->_eatable = false;
-        this->_deadly = false;
-        this->_alive = true;
-    }
-    else{
-        //TODO 应由专门的错误日志文件记录
-        cout<<"invalid ICON type."<<endl;
-        return;
-    }
+void RPGObj::initObj(string type,int index)
+{   _hp=100;
+    this->_coverable = false;
+    this->_eatable=false;
+    _index=index;
+    _direction = 0;
 
     this->_icon = ICON::findICON(type);
     QImage all;
-    all.load("C:\\learing\\programming\\RCgame\\TileB.png");
+    string thepath=path;
+    char indexpath='0'+index;
+    thepath+=("picture\\"+type+" ("+indexpath+").png");
+    const char* path1=thepath.c_str();
+    all.load(path1);
     this->_pic = all.copy(QRect(_icon.getSrcX()*ICON::GRID_SIZE, _icon.getSrcY()*ICON::GRID_SIZE, _icon.getWidth()*ICON::GRID_SIZE, _icon.getHeight()*ICON::GRID_SIZE));
 }
 
 void RPGObj::show(QPainter * pa)
 {
-    if(!_alive)return;
     int gSize = ICON::GRID_SIZE;
+    QTransform trans;
+    trans.translate(+this->getPosX()*66+33,+this->getPosY()*66+33);
+    trans.rotate(90*_direction);
+    trans.translate(-this->getPosX()*66-33,-this->getPosY()*66-33);
+    pa->setWorldTransform(trans);
     pa->drawImage(this->_pos_x*gSize,this->_pos_y*gSize,this->_pic);
 }
 
 void RPGObj::move(int direction, int steps){
     switch (direction){
-        case 1:
-            this->_pos_y -= steps;
-            break;
-        case 2:
-            this->_pos_y += steps;
-            break;
-        case 3:
-            this->_pos_x -= steps;
-            break;
-        case 4:
-            this->_pos_x += steps;
-            break;
+    case 2:
+        if(this->_pos_y<15)
+        this->_pos_y += steps;
+        break;
+    case 0:
+        if(this->_pos_y>0)
+        this->_pos_y -= steps;
+        break;
+    case 3:
+        if(this->_pos_x>0 )
+        this->_pos_x -= steps;
+        break;
+    case 1:
+        if(this->_pos_x<28 )
+        this->_pos_x += steps;
+        break;
+
     }
 }
 

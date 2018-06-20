@@ -25,17 +25,28 @@ public:
     void keyPressEvent(QKeyEvent *);
 protected slots:
     void randomMove();//响应时钟事件的函数
+    void bulletMove();
+    void start();
+    void end();
+signals:
+    void turnToMenu();
+    void turnToEnd();
+    void victory();
 private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
-
+    void newgame();
+    void oldgame();
 private:
     Ui::MW1 *ui;
     World _game;
     QTimer *timer;
+    QTimer *timer2;
+
+    bool status;//暂停使用，lu
         //时钟，控制玩家移动频率
 };
 

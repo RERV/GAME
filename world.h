@@ -5,36 +5,33 @@
 #include <string>
 #include <QPainter>
 #include "player.h"
-
+#include"enemy.h"
 class World
 {
 public:
     World(){}
     ~World(){}
+
     void initWorld(string mapFile);
-        //输入的文件中定义了初始状态下游戏世界有哪些对象，出生点在哪
-        /*e.g.
-           player 5 5
-           stone 3 3
-           fruit 7 8
-         */
     void save(string mapFile);
-
     void show(QPainter * painter);
-        //显示游戏世界所有对象
-    void handlePlayerMove(int direction, int steps,bool &b);
-        //假定只有一个玩家
-    void handleMonsterMove(bool &b);
+    void handlePlayerMove(int direction, int steps);
+    void handleMonsterMove();
+    void handleBulletMove();
+    void shootBullet(int x,int y,int direction,int index,int status);
+    void destroy();
+    void erase();
 
-    bool canCover(int direction, int steps,vector<RPGObj>::iterator k,bool &b);
-
+    bool canCover(int direction, int steps,vector<RPGObj*>::iterator k);
     bool canCover(int direction, int steps);
     bool canEat(int direction, int steps);
-    bool ifDead(int direction, int steps);
-    void destroy();
+    bool getVictory()const{return this->_victory;}
+
+    Player getPlayer()const{return _player;}
 private:
-    vector<RPGObj> _objs;
+    vector<RPGObj*> _objs;
     Player _player;
+    bool _victory;
 };
 
 #endif // WORLD_H

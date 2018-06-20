@@ -6,6 +6,8 @@
 
 QT       += core gui
 
+QT       += multimedia  multimediawidgets
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QTMap
@@ -28,16 +30,51 @@ SOURCES += main.cpp\
     icon.cpp \
     rpgobj.cpp \
     player.cpp \
-    world.cpp
+    world.cpp \
+    bullet.cpp \
+    enemy.cpp \
+    startshow.cpp \
+    vedioshow.cpp \
+    end.cpp \
+    choosegundam.cpp \
+    blood.cpp \
+    barrier.cpp \
+    gun.cpp \
+    key.cpp \
+    loading.cpp \
+    victory.cpp \
+    charge.cpp \
+    icebullet.cpp
 
 HEADERS  += \
     mw1.h \
     icon.h \
     rpgobj.h \
     player.h \
-    world.h
+    world.h \
+    bullet.h \
+    enemy.h \
+    startshow.h \
+    vedioshow.h \
+    end.h \
+    choosegundam.h \
+    blood.h \
+    barrier.h \
+    gun.h \
+    key.h \
+    loading.h \
+    victory.h \
+    charge.h \
+    icebullet.h
 
 FORMS    += \
-    mw1.ui
+    mw1.ui \
+    startshow.ui \
+    vedioshow.ui \
+    end.ui \
+    choosegundam.ui \
+    loading.ui \
+    victory.ui \
+    charge.ui
 
 CONFIG += c++11
